@@ -1,0 +1,148 @@
+.about-page {
+    padding-top: var(--section-spacing);
+    min-height: 100vh;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .about-content {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 4rem;
+    }
+}
+
+.about-image-container {
+    flex-shrink: 0;
+    width: 280px;
+    height: 280px;
+    position: relative;
+}
+
+.profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 24px;
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.2);
+    border: 4px solid var(--bg-color);
+    /* Creates separate look */
+}
+
+/* Floating background shape for image */
+.about-image-container::before {
+    content: '';
+    position: absolute;
+    top: 10%;
+    left: -10%;
+    width: 100%;
+    height: 100%;
+    background-color: var(--accent-color);
+    opacity: 0.1;
+    border-radius: 24px;
+    z-index: -1;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.lead-text {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 2rem;
+    line-height: 1.4;
+    letter-spacing: -0.01em;
+}
+
+.about-paragraphs {
+    margin-bottom: 2.5rem;
+}
+
+.about-paragraphs p {
+    margin-bottom: 1rem;
+    font-size: 1.05rem;
+    color: var(--text-secondary);
+}
+
+.personal-note {
+    margin-top: 1.5rem;
+    border-left: 3px solid var(--accent-color);
+    padding-left: 1rem;
+    color: var(--text-color) !important;
+}
+
+.key-strengths {
+    margin-bottom: 3rem;
+}
+
+.key-strengths h3 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.strengths-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.strength-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.strength-icon {
+    color: var(--secondary-accent);
+}
+
+.about-highlights {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.highlight-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.highlight-icon {
+    color: var(--accent-color);
+    padding: 8px;
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    width: 40px;
+    height: 40px;
+}
+
+.highlight-item h4 {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    letter-spacing: 0.05em;
+    margin-bottom: 0.25rem;
+}
+
+.highlight-item p {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-color);
+    margin: 0;
+}

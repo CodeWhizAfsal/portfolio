@@ -7,6 +7,7 @@ import Skills from './pages/Skills';
 import Projects from './pages/Projects';
 import Experience from './pages/Experience';
 import Contact from './pages/Contact';
+import Chatbot from './components/Chatbot';
 import { useEffect, useState } from 'react';
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
     <Router>
       <div className="app">
         <Navbar theme={theme} toggleTheme={toggleTheme} />
+        <Chatbot />
         <main>
           <Routes>
             <Route path="/" element={<Home />} />
